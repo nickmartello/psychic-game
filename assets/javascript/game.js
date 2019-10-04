@@ -17,14 +17,14 @@ function restart() {
 }
 function winsUp() {
     winner++
-    alert("You Won!")
+    swal("IM SO PROUD OF YOU FOR WINNING!")
     document.getElementById("wins-text").innerHTML = winner
     restart()
 }
 function lossesUp() {
         loser++
         document.getElementById("losses-text").innerHTML = loser
-        swal("You are a loser!")
+        swal("YOU LOSER! Your computer will self destruct")
         restart()
 }
 function youGuessed() {

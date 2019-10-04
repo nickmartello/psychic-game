@@ -1,13 +1,9 @@
 body {
-    color: red;
+    color: rgb(216, 211, 211);
     text-align: center;
 }
 
-.words {
-    color: blue;
-}
-
 p {
-    
+    font-size: 40px;
+    font-family:'Permanent Marker', cursive;
 }
-
