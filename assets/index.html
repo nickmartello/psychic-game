@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSYCHIC GAME</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
 </head>
 <body>
-    <h1>guess what letter im thinking of</h1>
-  
-    <p>Wins:<span id="win"></span></p>
-    <p id="lose">Losses:</p>
-    <p id="left">Guesses Left:</p>
-    <p id="already">Letters You Guessed Already:</p>
+    <h1>guess a letter ;)</h1>
+        <p>Wins: <span id="wins-text"></span></p>
+        <p>Losses: <span id="losses-text"></span></p>
+        <p>Guesses Left: <span id="guessesLeft-text">10</span></p>
+        <p>Letters You Guessed Already: <span id="guessedAlready-text"></span></p>
+        
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="javascript/game.js"></script>
 </body>
 </html>

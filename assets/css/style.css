@@ -1,8 +1,13 @@
 body {
     color: red;
+    text-align: center;
 }
 
 .words {
     color: blue;
+}
+
+p {
+    
 }
 

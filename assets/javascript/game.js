@@ -1,18 +1,64 @@
 var theChoices = ["a" , "b" , "c", "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"]
 console.log(theChoices)
 
-var wins = 0;
-var losses = 0;
+var winner = 0;
+var loser = 0;
 var guessesLeft = 10;
 var guessedAlready = [];
 
 var randomLetter = theChoices[Math.floor(Math.random() * theChoices.length)]
 console.log(randomLetter)
 
-document.onkeypress = function() {
-  var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase()
-  if (letterGuessed === randomLetter) 
-  document.getElementById("win").innerHTML = "PLEASE FUCKING WORK";
-  else document.getElementById("win").innerHTML
-    console.log(randomLetter) }
-  
+function restart() {
+  guessedAlready = []
+    guessesLeft = 10;
+    randomLetter = theChoices[Math.floor(Math.random() * theChoices.length)];
+    document.getElementById("guessesLeft-text").innerHTML = guessesLeft
+}
+function winsUp() {
+    winner++
+    alert("You Won!")
+    document.getElementById("wins-text").innerHTML = winner
+    restart()
+}
+function lossesUp() {
+        loser++
+        document.getElementById("losses-text").innerHTML = loser
+        swal("You are a loser!")
+        restart()
+}
+function youGuessed() {
+    var player = String.fromCharCode(event.keyCode).toLowerCase()
+    guessedAlready.push(player)
+    document.getElementById("guessedAlready-text").innerHTML = guessedAlready
+}
+document.onkeydown = function() {
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase()
+    youGuessed()
+    
+    if (letterGuessed === randomLetter) {
+        winsUp()
+        
+      } else {
+        guessesLeft--;
+        document.getElementById("guessesLeft-text").innerHTML = guessesLeft        
+      }
+      if (guessesLeft === 0) {
+          lossesUp()
+      }
+    }    
+
+
+              
+    
+
+    
+
+
+        
+
+   
+
+
+
+
