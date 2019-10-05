@@ -1,15 +1,11 @@
-var theChoices = ["a" , "b" , "c", "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"]
-console.log(theChoices)
+let theChoices = ["a" , "b" , "c", "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"]
 
-var winner = 0;
-var loser = 0;
-var guessesLeft = 10;
-var guessedAlready = [];
+let winner = 0;
+let loser = 0;
+let guessesLeft = 10;
+let guessedAlready = [];
 
-
-
-var randomLetter = theChoices[Math.floor(Math.random() * theChoices.length)]
-console.log(randomLetter)
+let randomLetter = theChoices[Math.floor(Math.random() * theChoices.length)]
 
 function restart() {
   guessedAlready = []
@@ -30,12 +26,12 @@ function lossesUp() {
         restart()
 }
 function youGuessed() {
-    var player = String.fromCharCode(event.keyCode).toLowerCase()
+    let player = String.fromCharCode(event.keyCode).toLowerCase()
     guessedAlready.push(player)
     document.getElementById("guessedAlready-text").innerHTML = guessedAlready
 }
 document.onkeydown = function() {
-    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase()
+    let letterGuessed = String.fromCharCode(event.keyCode).toLowerCase()
     youGuessed()
     
     if (letterGuessed === randomLetter) {
