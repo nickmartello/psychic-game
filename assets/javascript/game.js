@@ -47,27 +47,7 @@ document.onkeydown = function() {
       if (guessesLeft === 0) {
           lossesUp()
       }
-      $( document ).ready(function() {
-
-        var focusTextField = function(){
-          console.log("focusElement");
-        };
-      
-        var onKeypressHandler = function(){
-          console.log("* * * keypress event handler")
-          $('#search_input').blur().focus();
-        };
-      
-        var onClickHandler = function() {
-          $('.btn_abc').trigger('keypress');
-        };
-      
-        $('#search_input').bind('focus', focusTextField);
-        $('.btn_abc').bind('click', onClickHandler);
-        $('.btn_abc').bind('keypress', onKeypressHandler);
-      
-      });
-    }    
+ }    
         
 
 
