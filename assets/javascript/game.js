@@ -6,6 +6,8 @@ var loser = 0;
 var guessesLeft = 10;
 var guessedAlready = [];
 
+
+
 var randomLetter = theChoices[Math.floor(Math.random() * theChoices.length)]
 console.log(randomLetter)
 
@@ -45,6 +47,12 @@ document.onkeydown = function() {
       if (guessesLeft === 0) {
           lossesUp()
       }
+      document.getElementById('openKeyboard').addEventListener('click', function(){
+        var inputElement = document.getElementById('hiddenInput');
+        inputElement.style.visibility = 'visible'; // unhide the input
+        inputElement.focus(); // focus on it so keyboard pops
+        inputElement.style.visibility = 'hidden'; // hide it again
+    });
     }    
         
 
