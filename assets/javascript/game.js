@@ -38,7 +38,6 @@ document.onkeydown = function() {
     
     if (letterGuessed === randomLetter) {
         winsUp()
-        
       } else {
         guessesLeft--;
         document.getElementById("guessesLeft-text").innerHTML = guessesLeft        
@@ -47,6 +46,7 @@ document.onkeydown = function() {
           lossesUp()
       }
     }    
+        
 
 
               
