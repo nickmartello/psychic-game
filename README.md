@@ -1,4 +1,4 @@
-# psychic-game
+To Play https://nickmartello.github.io/psychic-game/
 
 # THE PSYCHIC GAME
 
